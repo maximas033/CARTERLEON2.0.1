@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- CONNECT IT TO CSS -->
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="leonCircle.css" />
+    <!-- CONNECT IT TO GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CONNECT IT TO FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <!-- MEDIA PIPE -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.1/camera_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.1/control_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.1/drawing_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/face_detection@0.0/face_detection.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Display Time -->
+    <section class="CurrentTime">
+      <div>
+        <h6 id="DisplayCurrentDay"></h6>
+      </div>
+      <div>
+        <h4 id="DisplayCurrentTime"></h4>
+      </div>
+    </section>
+    <!-- Hidden video element to capture video -->
+    <section id="face_recognition">
+      <video
+        class="input_video1"
+        style="display: none"
+        autoplay
+        muted
+        playsinline
+      ></video>
+      <canvas class="output1"></canvas>
+      <div class="loading"></div>
+    </section>
+    <!-- THIS IS THE RESPONCE FROM LEON-->
+    <section class="centerBottom borderBox">
+      <div>
+        <p id="output"></p>
+      </div>
+    </section>
+    <!-- THIS IS THE LOGO, IT ILL BE ALL THE WAY AT THE BOTTOM-->
+    <section class="center">
+      <div class="circleOuter" id="circleOuter"></div>
+      <div class="circle1" id="circle1">
+        <div class="circle2" id="circle2">
+          <div class="circle3" id="circle3">
+            <h3 id="name">L E O N</h3>
+          </div>
+          <div class="circleOuter1" id="circleOuter1"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="borderDangerBox" id="danger">
+      <div>
+        <h1>D A N G E R</h1>
+      </div>
+      <div>
+        <p>D A N G E R</p>
+      </div>
+    </section>
+    <!-- CONNECT IT TO NORMAL JS FILES -->
+    <script src="indexJavascript.js"></script>
+    <script src="leonTalk.js"></script>
+    <script src="leonFaceDetection.js"></script>
+  </body>
+</html>
