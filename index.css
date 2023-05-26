@@ -52,6 +52,15 @@
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* FADE IN/OUT ANIMATION */
 @keyframes fade {
   0% {
@@ -64,8 +73,11 @@
     opacity: 0;
   }
 }
+
 body {
   background-image: url("blue.jpeg");
+  /* background-image: radial-gradient(#ffffff32 1px, transparent 0),
+    linear-gradient(298deg, #0d0f37 0%, #000725 100%); */
   font-family: "Roboto", sans-serif;
   overflow-y: hidden;
   overflow-x: hidden;
@@ -82,6 +94,8 @@ body {
   font-size: 2em;
   margin: 2% 1% auto;
   padding: 0;
+  animation: fadeIn 0.5s ease-in-out;
+  display: none;
 }
 
 .CurrentTime {
@@ -95,18 +109,7 @@ body {
   color: white;
   font-weight: bold;
   margin: 0;
-  padding: 0;
-}
-
-#face_recognition {
-  width: 10%;
-  position: absolute;
-  bottom: 1%;
-  right: 1%;
-}
-
-.output1 {
-  width: 100%;
+  padding-top: 10px;
 }
 
 #danger {
@@ -118,3 +121,42 @@ body {
   transform: translate(-50%, -50%);
   display: none;
 }
+
+#version {
+  color: gray;
+  font-weight: lighter;
+  position: absolute;
+  bottom: 0%;
+  right: 0.5%;
+}
+
+.borderBox2 {
+  background-color: #003f6670;
+  color: #fff;
+  opacity: 0.8;
+  border-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/brace.svg)
+    70 70;
+  border-style: inset;
+  border-width: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+#handTrackingStuff {
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#camera {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+/* #canvas {
+  width: 20%;
+  height: 20%;
+} */

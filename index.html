@@ -6,36 +6,20 @@
     <!-- CONNECT IT TO CSS -->
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="leonCircle.css" />
-    <!-- CONNECT IT TO GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="dashboard.css" />
     <!-- CONNECT IT TO FIREBASE -->
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-    <!-- MEDIA PIPE -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.1/camera_utils.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.1/control_utils.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.1/drawing_utils.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@mediapipe/face_detection@0.0/face_detection.js"
-      crossorigin="anonymous"
-    ></script>
+    <!-- MEDIAPIPE -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_detection@0.0/face_detection.js"></script>
   </head>
-  <body>
+  <body id="display">
     <!-- Display Time -->
     <section class="CurrentTime">
       <div>
@@ -44,18 +28,6 @@
       <div>
         <h4 id="DisplayCurrentTime"></h4>
       </div>
-    </section>
-    <!-- Hidden video element to capture video -->
-    <section id="face_recognition">
-      <video
-        class="input_video1"
-        style="display: none"
-        autoplay
-        muted
-        playsinline
-      ></video>
-      <canvas class="output1"></canvas>
-      <div class="loading"></div>
     </section>
     <!-- THIS IS THE RESPONCE FROM LEON-->
     <section class="centerBottom borderBox">
@@ -75,6 +47,10 @@
         </div>
       </div>
     </section>
+    <!-- THIS WILL DISPLAY THE VERSION OF LEON -->
+    <section id="version">
+      <h5 class="borderBox2" id="version">v.2.0</h5>
+    </section>
 
     <section class="borderDangerBox" id="danger">
       <div>
@@ -84,9 +60,64 @@
         <p>D A N G E R</p>
       </div>
     </section>
+    <!-- 
+  
+  
+  
+  DASHBOARD VERSioN BELOW 
+
+
+````-->
+    <section id="topAll">
+      <section id="weatherSection">
+        <div>
+          <h5 id="hWeather">W E A T H E R</h5>
+        </div>
+        <div id="top">
+          <p id="cityName"></p>
+          <p id="currentWeather"></p>
+        </div>
+        <div id="center">
+          <p id="currentTemp"></p>
+        </div>
+        <div id="bottom">
+          <p id="currentHumidity"></p>
+          <p id="windSpeed"></p>
+          <p id="TodayHighLow"></p>
+        </div>
+        <div id="bottom_recomindation">
+          <p id="outfitRecomindation"></p>
+        </div>
+      </section>
+      <!-- -->
+      <section id="NotificationSection">
+        <div>
+          <p id="NotificationHeading">N O T I F I C A T I O N S</p>
+        </div>
+
+        <div>
+          <p id="wifiConnection"></p>
+        </div>
+      </section>
+    </section>
+
+    <section id="handTrackingStuff">
+      <video id="video" width="10%" height="10%" autoplay></video>
+      <canvas
+        id="canvas"
+        width="200px"
+        height="200px"
+        class="borderBox2"
+      ></canvas>
+    </section>
+
     <!-- CONNECT IT TO NORMAL JS FILES -->
+    <script src="LeonFirebase.js"></script>
+    <script src="LeonTalk.js"></script>
     <script src="indexJavascript.js"></script>
-    <script src="leonTalk.js"></script>
-    <script src="leonFaceDetection.js"></script>
+    <script src="LeonIsAWAKEorNOT.js"></script>
+    <script src="LeonSetingUpOffice.js"></script>
+    <script src="LeonDashboardWeather.js"></script>
+    <script src="LeonDashboardNotifications.js"></script>
   </body>
 </html>

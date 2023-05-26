@@ -1,7 +1,4 @@
 // DISPLAYS VERY SIMPLE INFORMATION LIKE TIME AND DATE
-//
-//
-//
 function GetTheCurrentTime() {
   const date = new Date();
   let hour = date.getHours();
