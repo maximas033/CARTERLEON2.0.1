@@ -4,6 +4,13 @@ function hideTheDay() {
   document.getElementById("DisplayCurrentDay").style.display = "none";
 }
 
+function hideTheNews() {
+  document.getElementById("displayImportantNews").style.display = "none";
+}
+
+function showTheNews() {
+  document.getElementById("displayImportantNews").style.display = "block";
+}
 function showTheDay() {
   document.getElementById("DisplayCurrentDay").style.display = "block";
 }

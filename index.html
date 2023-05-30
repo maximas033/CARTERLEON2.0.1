@@ -36,7 +36,7 @@
       </div>
     </section>
     <!-- THIS IS THE LOGO, IT ILL BE ALL THE WAY AT THE BOTTOM-->
-    <section class="center">
+    <section class="center" id="centerPiece">
       <div class="circleOuter" id="circleOuter"></div>
       <div class="circle1" id="circle1">
         <div class="circle2" id="circle2">
@@ -54,10 +54,10 @@
 
     <section class="borderDangerBox" id="danger">
       <div>
-        <h1>D A N G E R</h1>
+        <h1>L O C K D O W N</h1>
       </div>
       <div>
-        <p>D A N G E R</p>
+        <p>LEON IS UNDER THE LOCKDOWN</p>
       </div>
     </section>
     <!-- 
@@ -101,14 +101,9 @@
       </section>
     </section>
 
-    <section id="handTrackingStuff">
-      <video id="video" width="10%" height="10%" autoplay></video>
-      <canvas
-        id="canvas"
-        width="200px"
-        height="200px"
-        class="borderBox2"
-      ></canvas>
+    <section id="displayImportantNews">
+      <h2 id="importantNewsHeader">IMPORTANT NEWS</h2>
+      <div id="importantNewsBody"></div>
     </section>
 
     <!-- CONNECT IT TO NORMAL JS FILES -->
@@ -116,8 +111,9 @@
     <script src="LeonTalk.js"></script>
     <script src="indexJavascript.js"></script>
     <script src="LeonIsAWAKEorNOT.js"></script>
-    <script src="LeonSetingUpOffice.js"></script>
     <script src="LeonDashboardWeather.js"></script>
     <script src="LeonDashboardNotifications.js"></script>
+    <script src="LeonCheckForTheNews.js"></script>
+    <script src="LeonOnLoadProtocal.js"></script>
   </body>
 </html>

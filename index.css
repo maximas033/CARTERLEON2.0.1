@@ -142,21 +142,36 @@ body {
   margin: 0;
 }
 
-#handTrackingStuff {
-  align-items: center;
-  text-align: center;
+#displayImportantNews {
   position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-#camera {
-  width: 100px;
-  height: 100px;
+  bottom: 8%;
+  left: 1%;
   display: block;
+  width: 20%;
+  overflow: scroll;
+  height: 40%;
+  display: none;
 }
 
-/* #canvas {
-  width: 20%;
-  height: 20%;
-} */
+#importantNewsHeader {
+  font-size: 30px;
+  padding-bottom: 5%;
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  border-bottom: 2px solid #ff0000;
+  color: white;
+}
+
+#importantNewsBody {
+  font-weight: lighter;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+  margin: 0 0 6% 0;
+  padding: 0;
+  color: white;
+}
+
+a {
+  color: white;
+}

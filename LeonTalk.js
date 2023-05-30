@@ -136,7 +136,9 @@ function GetValue() {
           brightTheScreen();
           hideDashboard();
           startRecognition();
+          checkShowNewsValue();
         } else {
+          hideTheNews();
           hideTheDay();
           dimTheScreen();
           showDashboard();
